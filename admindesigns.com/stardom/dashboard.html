@@ -1,0 +1,532 @@
+﻿<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from admindesigns.com/stardom/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 08 May 2014 15:00:33 GMT -->
+<head>
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<title>Stardom - A Responsive HTML5 Admin UI Template Theme</title>
+<meta name="keywords" content="HTML5 Bootstrap 3 Admin Template UI Theme" />
+<meta name="description" content="Stardom - A Responsive HTML5 Admin UI Template Theme">
+<meta name="author" content="Holladay">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Font CSS  -->
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700">
+
+<!-- Core CSS  -->
+<link rel="stylesheet" type="text/css" href="../../netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../../netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="fonts/glyphicons_pro/glyphicons.min.css">
+
+<!-- Plugin CSS -->
+<link rel="stylesheet" type="text/css" href="vendor/plugins/calendar/fullcalendar.css">
+<link rel="stylesheet" type="text/css" href="vendor/plugins/datatables/css/datatables.min.css">
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+
+<!-- Theme CSS -->
+<link rel="stylesheet" type="text/css" href="css/theme.css">
+<link rel="stylesheet" type="text/css" href="css/pages.css">
+<link rel="stylesheet" type="text/css" href="css/plugins.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+<!-- Boxed-Layout CSS -->
+<link rel="stylesheet" type="text/css" href="css/boxed.css">
+
+<!-- Demonstration CSS -->
+<link rel="stylesheet" type="text/css" href="css/demo.css">
+
+<!-- Your Custom CSS -->
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="img/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body class="dashboard">
+<script> var boxtest = localStorage.getItem('boxed'); if (boxtest === 'true') {document.body.className+=' boxed-layout';} </script> 
+<!-- Start: Header -->
+<header class="navbar navbar-fixed-top">
+  <div class="pull-left"><span id="syncStatus">OK</span>&nbsp;Sync Status</div>
+  <div align="center" class="hInfo">
+  <span id="curDate"><script>var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];var d=new Date();document.getElementById("curDate").innerHTML=d.getDate()+' '+ months[d.getMonth()] + ' ' + d.getFullYear()</script></span>
+  <span id="curTime"><script>var d=new Date();document.getElementById("curTime").innerHTML=d.getHours()+':'+d.getMinutes()+' GMT '+(d.getTimezoneOffset()*(Math.pow(60,-1)))</script></span>
+  <span id="regi">ZS-PPH</span><span id="type">H25B</span><span id="serial">Serial &#35;401707</span></div>
+  <div class="pull-right header-btns"><button>Online Support</button></div>
+</header>
+<!-- End: Header --> 
+<!-- Start: Main -->
+<div id="main"> 
+  <!-- Start: Sidebar -->
+  
+  <!-- End: Sidebar --> 
+  <!-- Start: Content -->
+  <section id="content">
+    <div id="topbar">
+      <ol class="breadcrumb">
+        <li><span class="glyphicons glyphicons-settings"></span></li>
+        <li class="active">Maintenance</li>
+      </ol>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="console-btns">
+            <div class="row">
+              <div class="col-sm-6 col-md-3">
+                <div class="console-btn">
+                  <div class="console-icon divider-right"> <span class="glyphicons glyphicons-nameplate"></span> </div>
+                  <div class="console-text">
+                    <div class="console-title">Startup</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="console-btn">
+                  <div class="console-icon divider-right"> <span class="glyphicons glyphicons-airplane"></span> </div>
+                  <div class="console-text">
+                    <div class="console-title">Operational</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="console-btn">
+                  <div class="console-icon divider-right"> <span class="glyphicons glyphicons-settings"></span> </div>
+                  <div class="console-text">
+                    <div class="console-title">Maintenance</div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="console-btn">
+                  <div class="console-icon divider-right"> <span class="glyphicons glyphicons-notes"></span> </div>
+                  <div class="console-text">
+                    <div class="console-title">Summary</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="short margin-top-none">
+      <div class="row">
+        <div class="col-md-8" style="width:75%;">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="panel">
+                <div class="panel-heading">
+                  <div class="panel-title"> <i class="fa fa-bar-chart-o"></i> AIRCRAFT STATS</div>
+                </div>
+                <div class="panel-body" align="center">
+                  <div class="stats" align="center"><fieldset><legend>Engine</legend>
+                  <table class="sTable" id="engine">
+                  <tr><td></td><td>&#35; 1</td><td>&#35; 2</td><td>APU</td></tr>
+                  <tr><td>HOURS</td>
+                  	<td><input type="number" id="eHour1"></td>
+                    <td><input type="number" id="eHour2"></td>
+                    <td><input type="number" id="eApu"></td></tr>
+                  <tr><td>CYCLES</td>
+                  <td><input type="number" id="eCycle1"></td>
+                  <td><input type="number" id="eCycle2"></td>
+                  <td></td></tr>
+                  </table></fieldset>
+                  </div>
+                  <div class="stats" align="center"><fieldset><legend>Airframe</legend>
+                  <table class="sTable" id="airframe">
+                  <tr><td>HOURS</td><td><input type="number" id="aHours"></td></tr>
+                  <tr><td>LANDINGS</td><td><input type="number" id="aLand"></td></tr>
+                  </table></fieldset>
+                  </div>
+                  <div class="stats" align="center"><fieldset><legend>Line Maintenance</legend>
+                  <table class="sTable" id="lineMaint">
+                  <tr><td><a href=""><span class="glyphicons glyphicons-circle_plus"></span></a>&nbsp;LOGBOOK</td>
+                  <td><a href=""><span class="glyphicons glyphicons-circle_plus"></span></a>&nbsp;TOP UPS</td></tr>  
+                  </table></fieldset>
+                  </div>
+                </div>
+                <div class="panel-footer" style="display:-webkit-box;font-variant:small-caps;">
+                  <div style="margin-right:25px;font-weight:bold;">Next Inspection&#58;<span id="nHour"></span> &#64;&nbsp;<span id="nOR"></span> or <span id="nDate"></span></div><div style="margin-right:25px;font-weight:bold;">Remaining&#58;&nbsp;<span id="rem"></span></div><div style="margin-right:25px;font-weight:bold;">Status&#58;&nbsp;<span id="stat">ALERT!</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="panel">
+                <div class="panel-heading">
+                  <div class="panel-title"> <i class="fa fa-chain-broken"></i> DEFECTS &amp; DEFERRED DEFECTS</div>
+                </div>
+                <div class="panel-body" style="padding:5px;">
+                	<table id="dFect" align="center">
+                        <tr style="font-variant: small-caps;font-weight: bold;"><td>Defect</td><td>Date Logged</td><td>Action Taken</td><td>Engineer</td><td>Date</td><td>Status</td><td style="text-align:center;">Remaining<br>(days)</td></tr>
+                        <tr><td><input type="text" style="width:145px"></td><td><input type="date" style="width:110px"></td><td><input type="text" style="width:135px"></td><td><input type="text" style="width:75px"></td><td><input type="date" style="width:110px"></td><td><svg xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="14" r="8" stroke="black" stroke-width="1" fill="orange" /></svg></td><td style="text-align:center;"><input type="number" style="width:25px"></td></tr>
+                        <tr><td><input type="text" style="width:145px"></td><td><input type="date" style="width:110px"></td><td><input type="text" style="width:135px"></td><td><input type="text" style="width:75px"></td><td><input type="date" style="width:110px"></td><td><svg xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="14" r="8" stroke="black" stroke-width="1" fill="white" /></svg></td><td style="text-align:center;"><input type="number" style="width:25px"></td></tr><tr><td id="aDfct"><button data-toggle="modal" data-target="#myModal">Add Defect..</button></td></tr>
+                    </table>
+                    <div class="modal fade" role="dialog" id="myModal"><div class="modal-dialog">
+                    <div id="nDfct" class="panel modal-content">
+                    	<div class="panel-heading modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><div class="panel-title modal-title">ADD DEFECT</div></div>
+                    	<div class="panel-body modal-body">
+                        <form id="fDfct">
+                        	   Defect&nbsp;<input type="text"><br>
+                            Date&nbsp;<input type="date"><br>
+                            Action Taken&nbsp;<input type="text"><br>
+                            Engineer&nbsp;<input type="text"><br>
+                            Status&nbsp;<input type="text"><br>
+                            Remaining(days)&nbsp;<input type="number">
+                        </form>
+                        </div><div class="panel-footer modal-footer"><button type="button" class="btn btn-primary">Save</button></div>
+                    </div></div></div>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-12" style="width:133%;">
+              <div class="panel">
+              		<div class="panel-heading">
+                    <div class="panel-title"> <i class="glyphicons glyphicons-stats"></i> TREND MONITORING</div>
+                    </div>
+                    <div class="panel-body">
+                    	<div class="tMon">
+                        <table><tr><td colspan="6">Flight Details</td></tr>
+                        <tr><td>weight</td><td>oat/sat</td><td>ias</td><td>tas</td><td>mach</td><td>fl</td></tr>
+                        <tr><td class="bord">22750</td><td class="bord">-20</td><td class="bord">264</td><td class="bord">444</td><td class="bord">M.75</td><td class="bord">FL330</td></tr>
+                      </table>
+                      <table><tr><td colspan="6">Fuel Flow</td></tr>
+                        <tr><td>l</td><td>r</td></tr>
+                        <tr><td class="bord">880</td><td class="bord">880</td></tr>
+                      </table>
+                      <table><tr><td colspan="6">N1</td></tr>
+                        <tr><td>l</td><td>r</td></tr>
+                        <tr><td class="bord">92.9</td><td class="bord">93.0</td></tr>
+                      </table>
+                      <table><tr><td colspan="6">N2</td></tr>
+                        <tr><td>l</td><td>r</td></tr>
+                        <tr><td class="bord">94.7</td><td class="bord">94.2</td></tr>
+                      </table>
+                      <table><tr><td colspan="6">ITT</td></tr>
+                        <tr><td>l</td><td>r</td></tr>
+                        <tr><td class="bord">860</td><td class="bord">848</td></tr>
+                      </table>
+                      <table><tr><td colspan="6">Oil Pres.</td></tr>
+                        <tr><td>l</td><td>r</td></tr>
+                        <tr><td class="bord">43</td><td class="bord">46</td></tr>
+                      </table>
+                      <table><tr><td colspan="6">Oil Temp</td></tr>
+                        <tr><td>l</td><td>r</td></tr>
+                        <tr><td class="bord">77</td><td class="bord">79</td></tr>
+                      </table>
+                      <table><tr><td colspan="6">amps</td></tr>
+                        <tr><td>l</td><td>r</td></tr>
+                        <tr><td class="bord">80</td><td class="bord">80</td></tr>
+                      </table>
+                      <table><tr><td colspan="6">Fuel Temp.</td></tr>
+                        <tr><td class="bord" rowspan="2">20</td></tr>
+                      </table>
+                    </div>
+                    </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" style="width:25%;">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="panel">
+              		<fieldset><div class="panel-heading"><div class="panel-title"><i class="fa fa-bar-chart-"></i>DOCUMENTATION</div>
+                </div><table id="docu" align="center">
+                    <tr><td style="font-weight:bold;font-size:18px;">Type</td><td style="font-weight:bold;font-size:18px;"">Expiry (days)</td></tr>
+                    <tr><td>crew</td><td><span id="crew">6</span></td></tr>
+                    <tr><td>insurance</td><td><span id="insur">11</span></td></tr>
+                    <tr><td>radio station</td><td><span id="radio">36</span></td></tr>
+                    <tr><td>mass &amp; balance</td><td><span id="mBal">56</span></td></tr>
+                    <tr><td>c of a</td><td><span id="coa">97</span></td></tr>
+                    <tr><td>rvsm certificate</td><td><span id="rvsm">111</span></td></tr>
+                    <tr><td>noise certificate</td><td><span id="noise">167</span></td></tr>
+                    <tr><td>release to service</td><td><span id="rts">183</span></td></tr>
+                    <tr><td>c of r</td><td><span id="cor">---</span></td></tr>
+                    </table></fieldset> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End: Content --> 
+</div>
+<!-- End: Main --> 
+
+<!-- Core Javascript - via CDN --> 
+<script src="../../ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+<script src="../../ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script> 
+<script src="../../netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script> <!-- Plugins - Via CDN --> 
+<script type="text/javascript" src="../../cdnjs.cloudflare.com/ajax/libs/flot/0.8.1/jquery.flot.min.js"></script> 
+<script type="text/javascript" src="../../cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js"></script> 
+<script type="text/javascript" src="../../ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script> 
+<script type="text/javascript" src="../../cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/fullcalendar.min.js"></script> 
+
+<!-- Plugins - Via Local Storage
+<script type="text/javascript" src="vendor/plugins/jqueryflot/jquery.flot.min"></script>
+<script type="text/javascript" src="vendor/plugins/sparkline/jquery.sparkline.min.js"></script>
+<script type="text/javascript" src="vendor/plugins/datatables/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="vendor/plugins/calendar/fullcalendar.min.js"></script>
+--> 
+
+<!-- Plugins --> 
+<script type="text/javascript" src="vendor/plugins/calendar/gcal.js"></script><!-- Calendar Addon --> 
+<script type="text/javascript" src="vendor/plugins/jqueryflot/jquery.flot.resize.min.js"></script><!-- Flot Charts Addon --> 
+<script type="text/javascript" src="vendor/plugins/datatables/js/datatables.js"></script><!-- Datatable Bootstrap Addon --> 
+
+<!-- Theme Javascript --> 
+<script type="text/javascript" src="js/uniform.min.js"></script> 
+<script type="text/javascript" src="js/main.js"></script> 
+<!--<script type="text/javascript" src="js/plugins.js"></script>--> 
+<script type="text/javascript" src="js/custom.js"></script> 
+<script type="text/javascript">$(document).ready(function(){
+	$("#aDfct>button").on("click", function(){$("#nDfct").show("fast")});})</script>
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+	  
+	// Init Theme Core 	  
+	Core.init();
+
+	// Init Datatables
+	$('#datatable, #datatable_2').dataTable( {
+	  "bSort": true,
+	  "bPaginate": false,
+	  "bLengthChange": false,
+	  "bFilter": false,
+	  "bInfo": false,
+	  "bAutoWidth": false,
+	  "aoColumnDefs": [{ 'bSortable': false, 'aTargets': [ -1 ] }]
+	});
+	
+	// Init Sparkline Plugin
+ 	var runSparkline = function () {
+		
+		// Define Sparklines values
+		var Values1 = [0,1,5,2,4,3,5,8,7];
+		var Values2 = [3,2,3,1,0,2,5,6,4];
+		var Values3 = [6,4,5,3,4,2,1,2,3];
+		var Values4 = [2,1,2,3,2,4,2,1,0];
+
+	    // Pass values, define options, and create chart
+		$('.sparkbar1').sparkline(Values1, {type: "bar",
+				barColor: "#428bca",
+				barWidth: "8",
+				height: "35"} 
+		);
+		$('.sparkbar2').sparkline(Values2, {type: "bar",
+				barColor: "#5cb85c",
+				barWidth: "8",
+				height: "35"} 
+		);
+		$('.sparkbar3').sparkline(Values3, {type: "bar",
+				barColor: "#5bc0de",
+				barWidth: "8",
+				height: "35"} 
+		);
+		$('.sparkbar4').sparkline(Values4, {type: "bar",
+				barColor: "#777777",
+				barWidth: "8",
+				height: "35"} 
+		);
+		
+		// Quick function to animate the appearance of Sparklines
+		// Only ran on Sparkline elements which have the 
+		// ".sparkline-delay" class and a set data-delay attr
+		(function() {
+			$('.sparkline-delay').each(function() {
+				var This = $(this)
+				var delayTime = $(this).data('delay');
+	
+				$(This).children('canvas').css({"height": "0", "vertical-align": "bottom"});
+				var delayCharts = setTimeout(function () {
+					  $(This).children('canvas').animate({height: 35}, 1800);
+				}, delayTime); 
+			});
+		})();		
+  	}
+
+	// Init Calendar Plugin
+	var runFullCalendar = function () {
+		var date = new Date();
+		var d = date.getDate();
+		var m = date.getMonth();
+		var y = date.getFullYear();
+		
+		// Define Calendar options and events
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay'
+			},
+			editable: true,
+			events: [
+				{
+					title: 'All Day Event',
+					start: new Date(y, m, 9),
+					color: '#008aaf '
+				},
+				{
+					title: 'Long Event',
+					start: new Date(y, m, d-5),
+					end: new Date(y, m, d-3)
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: new Date(y, m, d+3, 16, 0),
+					allDay: false
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: new Date(y, m, d+10, 16, 0),
+					allDay: false
+				},
+				{
+					title: 'Meeting',
+					start: new Date(y, m, d, 10, 30),
+					allDay: false,
+					color: '#0070ab'
+				},
+				{
+					title: 'Lunch',
+					start: new Date(y, m, d, 12, 0),
+					end: new Date(y, m, d, 14, 0),
+					allDay: false,
+					color: '#0070ab'
+				},
+				{
+					title: 'Birthday Party',
+					start: new Date(y, m, d+1, 19, 0),
+					end: new Date(y, m, d+1, 22, 30),
+					allDay: false
+				},
+				{
+					title: 'Mandatory!',
+					start: new Date(y, m, 22),
+					color: '#d10011'
+				}
+			]
+		});
+	}
+
+	// Init Flot Charts Plugin
+	var runFlotCharts = function () {
+		
+	// Define chart clolors ( add more colors if you want or flot will do it automatically
+	var chartColours = ['#5bc0de'];
+
+	// Generate random number for charts
+	randNum = function(){return (Math.floor( Math.random()* (1+40-20) ) ) + 20;}
+
+	// Check if element exist and draw auto updating chart
+	if($(".chart-updating").length) {
+		$(function () {
+			// We use an inline data source in the example, usually data would
+			// be fetched from a server
+			var data = [], totalPoints = 50;
+			function getRandomData() {
+				if (data.length > 0)
+					data = data.slice(1);
+
+				while (data.length < totalPoints) {
+					var prev = data.length > 0 ? data[data.length - 1] : 50;
+					var y = prev + Math.random() * 10 - 5;
+					if (y < 0)
+						y = 0;
+					if (y > 100)
+						y = 100;
+					data.push(y);
+				}
+
+				var res = [];
+				for (var i = 0; i < data.length; ++i)
+					res.push([i, data[i]])
+				return res;
+			}
+
+			var updateInterval = 750;
+
+			var options = {
+				series: { 
+					shadowSize: 0, // drawing is faster without shadows
+					lines: {
+						show: true,
+						fill: true,
+						fillColor: { colors: ['rgba(47, 137, 214, 0.4)', 'rgba(98, 174, 239, 0.3)'] },
+						lineWidth: 1,
+						steps: false
+					},
+					points: {
+						show: false,
+						radius: 2.5,
+						symbol: "circle",
+						lineWidth: 2.5
+					}
+				},
+				grid: {
+					show: true,
+					aboveData: false,
+					color: "#3f3f3f",
+					labelMargin: 5,
+					axisMargin: 0, 
+					borderWidth: 0,
+					borderColor:null,
+					minBorderMargin: 5 ,
+					clickable: true, 
+					hoverable: true,
+					autoHighlight: false,
+					mouseActiveRadius: 20
+				}, 
+				colors: chartColours,
+				yaxis: { 
+					 min: 0,
+					 max: 100,
+					 font: {size: 11,	color: "#888888"}
+				},
+				xaxis: { 
+					 show: true,
+					 font: {size: 11,	color: "#888888"}
+				}
+			};
+			var plot = $.plot($(".chart-updating"), [ getRandomData() ], options);
+
+			function update() {
+				plot.setData([ getRandomData() ]);
+				// since the axes don't change, we don't need to call plot.setupGrid()
+				plot.draw();
+				
+				setTimeout(update, updateInterval);
+			}
+			update();
+		});
+	  }
+  }
+     
+  runSparkline();
+  runFullCalendar();	  
+  runFlotCharts();
+  
+  // Example animations for Header Dropdown Menus - For Demo Purposes
+  $('.header-btns > div').on('show.bs.dropdown', function() {
+	  $(this).children('.dropdown-menu').addClass('animated animated-short flipInY');
+  });
+  $('.header-btns > div').on('hide.bs.dropdown', function() {
+	  $(this).children('.dropdown-menu').removeClass('animated flipInY');
+  });
+			  
+
+});
+</script>
+</body>
+
+<!-- Mirrored from admindesigns.com/stardom/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 08 May 2014 15:00:33 GMT -->
+</html>
